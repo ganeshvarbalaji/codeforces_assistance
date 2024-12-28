@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="filter_config_section">
+        <label>Handle: </label>
+        <input type="text">
+        <button>Submit</button>
+        <br>
+        <div id="selected_tags">
+                <!-- <div style="display: inline;" class="tags" id="implementation">
+                    <p style="display: inline;">implementation </p><img onclick="remove_tag('implementation')" src="./close-10x10.png">
+                </div> -->
+            </div>
+        <select name="tags" id="tag_select">
+            <option value="">--Please choose an option--</option>
+            <option value="implementation">implementation</option>
+            <option value="brute force">brute force</option>
+            <option value="math">math</option>
+            <option value="string">string</option>
+            <option value="dp">dp</option>
+            <option value="greedy">greedy</option>
+            <option value="constructive algorithms">constructive algorithms</option>
+            <option value="binary search">binary search</option>
+            <option value="graph">graph</option>
+        </select>
+        <button onclick="add_tag()">Add Tag</button>
+
+        <br>
+        <div id="only_selected_tags_option">
+            <label>Only Selected Tags:</label>
+            <input type="checkbox" id="only_selected_tags_check">
+        </div>
+
+        <button onclick="test()">Test</button>
+        <button onclick="search()">Search</button>
+    </div>
+
+    
+
+    <div class="container">
+        <table id="problems_table">
+            <thead>
+                <tr>
+                    <td style="border-radius: 20px 0px 0px 0px; border: none;">Link</td>
+                    <td style="border: none;">Name</td>
+                    <td style="border: none;">Tags</td>
+                    <td style="border: none;">Rating<img id="rating_sort_button" onclick="rating_sort()" src="./down_icon_bg_removed.png" style="cursor:pointer; height: 20px; vertical-align: bottom;"></td>
+                    <td style="border-radius: 0px 20px 0px 0px; border: none;">People Solved</td>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+
+            </tbody>
+        </table>
+    </div>
+    <div id="page_buttons">
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
